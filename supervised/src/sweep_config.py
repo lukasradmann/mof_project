@@ -9,12 +9,12 @@ sweep_config = {
         "learning_rate": {
             "distribution": "log_uniform_values",
             "min": 1e-4, 
-            "max": 1e-1
+            "max": 1e-2
         },
         "batch_size": {
             "distribution": "q_log_uniform_values",
             "q": 8,
-            "min": 32,
+            "min": 64,
             "max": 256,
         },
         "n_layers": {
@@ -24,12 +24,17 @@ sweep_config = {
         },
         "n_units": {
             "distribution": "categorical",
-            "values": [32, 64, 128],
+            "values": [64, 128],
         },
         "dropout": {
             "distribution": "uniform",
-            "min": 0.2,
+            "min": 0.1,
             "max": 0.5,
-        }
+        },
     },
+    "early_terminate": {
+      "type" : "hyperband",
+      "min_iter": 3,
+      "eta": 3
+    }
 }
