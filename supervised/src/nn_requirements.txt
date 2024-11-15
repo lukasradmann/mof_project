@@ -1,6 +1,5 @@
 torch
 numpy
-pytorch-lightning
 pandas
 wandb
 lightning
