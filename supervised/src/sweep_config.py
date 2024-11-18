@@ -18,18 +18,16 @@ sweep_config = {
             "max": 256,
         },
         "n_layers": {
-            "distribution": "int_uniform",
-            "min": 2,
-            "max": 4,
+            "value": 3
         },
         "n_units": {
             "distribution": "categorical",
-            "values": [64, 128],
+            "values": [128],
         },
         "dropout": {
             "distribution": "uniform",
             "min": 0.1,
-            "max": 0.5,
+            "max": 0.4,
         },
     },
     "early_terminate": {
