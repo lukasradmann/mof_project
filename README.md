@@ -13,7 +13,7 @@
 ├── .gitignore                    <- The top-level README for developers using this project.
 │
 ├── autogluon
-│   ├── AutogluonModels           <- Saved autogluon models.
+│   ├── AutogluonModels           <- Saved autogluon models and generated reports.
 │   ├── autogluon.py              <- Code for training an autogluon model.
 │   └── requirements.txt          <- Required dependencies.
 │
