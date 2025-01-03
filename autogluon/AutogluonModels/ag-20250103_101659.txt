@@ -1,0 +1,58 @@
+Time limit: 600
+Evaluation Scores:
+mean_absolute_error: -0.13524263191567815
+root_mean_squared_error: -0.24184425486097266
+mean_squared_error: -0.058488643609259094
+r2: 0.792420868064825
+pearsonr: 0.8901997781607569
+median_absolute_error: -0.06045799535560609
+
+Leaderboard:
+              model  score_test  score_val         eval_metric  pred_time_test  pred_time_val   fit_time  pred_time_test_marginal  pred_time_val_marginal  fit_time_marginal  stack_level  can_infer  fit_order
+WeightedEnsemble_L2   -0.135243  -0.131134 mean_absolute_error        5.737360       0.610260 279.356596                 0.003403                0.000500           0.035817            2       True         11
+           LightGBM   -0.136922  -0.132337 mean_absolute_error        4.487368       0.487237  24.447476                 4.487368                0.487237          24.447476            1       True          4
+            XGBoost   -0.139301  -0.136931 mean_absolute_error        0.408038       0.037310  18.035607                 0.408038                0.037310          18.035607            1       True          9
+    RandomForestMSE   -0.140306  -0.137531 mean_absolute_error        0.457869       0.052780  94.824163                 0.457869                0.052780          94.824163            1       True          5
+           CatBoost   -0.140823  -0.136779 mean_absolute_error        0.138525       0.007062 141.734452                 0.138525                0.007062         141.734452            1       True          6
+         LightGBMXT   -0.144586  -0.144071 mean_absolute_error        7.446973       0.871168  36.602390                 7.446973                0.871168          36.602390            1       True          3
+      ExtraTreesMSE   -0.149550  -0.146283 mean_absolute_error        0.453688       0.051586  10.142440                 0.453688                0.051586          10.142440            1       True          7
+     NeuralNetTorch   -0.153559  -0.149895 mean_absolute_error        0.086111       0.010798 183.632684                 0.086111                0.010798         183.632684            1       True         10
+     KNeighborsDist   -0.159241  -0.156000 mean_absolute_error        0.242157       0.025371   0.279081                 0.242157                0.025371           0.279081            1       True          2
+     KNeighborsUnif   -0.160949  -0.157423 mean_absolute_error        0.240277       0.039138   1.330006                 0.240277                0.039138           1.330006            1       True          1
+    NeuralNetFastAI   -0.164307  -0.164962 mean_absolute_error        0.176009       0.016452  84.496900                 0.176009                0.016452          84.496900            1       True          8
+
+Feature Importance:
+                                      importance    stddev       p_value  n  p99_high   p99_low
+surface_area [m^2/g]                    0.430587  0.009371  2.690294e-08  5  0.449882  0.411292
+void_fraction                           0.383367  0.008054  2.336469e-08  5  0.399950  0.366783
+void_volume [cm^3/g]                    0.253527  0.008080  1.236579e-07  5  0.270164  0.236889
+volume [A^3]                            0.093770  0.002015  2.556871e-08  5  0.097919  0.089622
+largest_free_sphere_diameter [A]        0.085508  0.006041  2.970639e-06  5  0.097947  0.073068
+metal_linker                            0.077145  0.003926  8.025344e-07  5  0.085229  0.069060
+largest_included_sphere_diameter [A]    0.057070  0.003247  1.252299e-06  5  0.063756  0.050384
+weight [u]                              0.056799  0.002043  2.004688e-07  5  0.061005  0.052593
+
+Summary:
+model_types: {'KNeighborsUnif': 'KNNModel', 'KNeighborsDist': 'KNNModel', 'LightGBMXT': 'LGBModel', 'LightGBM': 'LGBModel', 'RandomForestMSE': 'RFModel', 'CatBoost': 'CatBoostModel', 'ExtraTreesMSE': 'XTModel', 'NeuralNetFastAI': 'NNFastAiTabularModel', 'XGBoost': 'XGBoostModel', 'NeuralNetTorch': 'TabularNeuralNetTorchModel', 'WeightedEnsemble_L2': 'WeightedEnsembleModel'}
+model_performance: {'KNeighborsUnif': -0.1574234366967507, 'KNeighborsDist': -0.15600028229341587, 'LightGBMXT': -0.1440708810789904, 'LightGBM': -0.1323367581510242, 'RandomForestMSE': -0.13753068835428559, 'CatBoost': -0.13677854037351622, 'ExtraTreesMSE': -0.146283451699425, 'NeuralNetFastAI': -0.1649619719349365, 'XGBoost': -0.13693115750476278, 'NeuralNetTorch': -0.14989467450076277, 'WeightedEnsemble_L2': -0.1311343894377197}
+model_best: WeightedEnsemble_L2
+model_paths: {'KNeighborsUnif': ['KNeighborsUnif'], 'KNeighborsDist': ['KNeighborsDist'], 'LightGBMXT': ['LightGBMXT'], 'LightGBM': ['LightGBM'], 'RandomForestMSE': ['RandomForestMSE'], 'CatBoost': ['CatBoost'], 'ExtraTreesMSE': ['ExtraTreesMSE'], 'NeuralNetFastAI': ['NeuralNetFastAI'], 'XGBoost': ['XGBoost'], 'NeuralNetTorch': ['NeuralNetTorch'], 'WeightedEnsemble_L2': ['WeightedEnsemble_L2']}
+model_fit_times: {'KNeighborsUnif': 1.3300061225891113, 'KNeighborsDist': 0.279080867767334, 'LightGBMXT': 36.60239005088806, 'LightGBM': 24.447475910186768, 'RandomForestMSE': 94.82416296005249, 'CatBoost': 141.73445224761963, 'ExtraTreesMSE': 10.142439842224121, 'NeuralNetFastAI': 84.49689984321594, 'XGBoost': 18.035606861114502, 'NeuralNetTorch': 183.63268399238586, 'WeightedEnsemble_L2': 0.03581714630126953}
+model_pred_times: {'KNeighborsUnif': 0.039138078689575195, 'KNeighborsDist': 0.02537083625793457, 'LightGBMXT': 0.8711681365966797, 'LightGBM': 0.48723721504211426, 'RandomForestMSE': 0.0527801513671875, 'CatBoost': 0.007061958312988281, 'ExtraTreesMSE': 0.05158591270446777, 'NeuralNetFastAI': 0.01645207405090332, 'XGBoost': 0.037309885025024414, 'NeuralNetTorch': 0.010797977447509766, 'WeightedEnsemble_L2': 0.0004999637603759766}
+num_bag_folds: 0
+max_stack_level: 2
+model_hyperparams: {'KNeighborsUnif': {'weights': 'uniform'}, 'KNeighborsDist': {'weights': 'distance'}, 'LightGBMXT': {'learning_rate': 0.05, 'extra_trees': True}, 'LightGBM': {'learning_rate': 0.05}, 'RandomForestMSE': {'n_estimators': 300, 'max_leaf_nodes': 15000, 'n_jobs': -1, 'random_state': 0, 'bootstrap': True, 'criterion': 'squared_error'}, 'CatBoost': {'iterations': 10000, 'learning_rate': 0.05, 'random_seed': 0, 'allow_writing_files': False, 'eval_metric': 'MAE'}, 'ExtraTreesMSE': {'n_estimators': 300, 'max_leaf_nodes': 15000, 'n_jobs': -1, 'random_state': 0, 'bootstrap': True, 'criterion': 'squared_error'}, 'NeuralNetFastAI': {'layers': None, 'emb_drop': 0.1, 'ps': 0.1, 'bs': 'auto', 'lr': 0.01, 'epochs': 'auto', 'early.stopping.min_delta': 0.0001, 'early.stopping.patience': 20, 'smoothing': 0.0}, 'XGBoost': {'n_estimators': 10000, 'learning_rate': 0.1, 'n_jobs': -1, 'proc.max_category_levels': 100, 'objective': 'reg:squarederror', 'booster': 'gbtree'}, 'NeuralNetTorch': {'num_epochs': 1000, 'epochs_wo_improve': None, 'activation': 'relu', 'embedding_size_factor': 1.0, 'embed_exponent': 0.56, 'max_embedding_dim': 100, 'y_range': None, 'y_range_extend': 0.05, 'dropout_prob': 0.1, 'optimizer': 'adam', 'learning_rate': 0.0003, 'weight_decay': 1e-06, 'proc.embed_min_categories': 4, 'proc.impute_strategy': 'median', 'proc.max_category_levels': 100, 'proc.skew_threshold': 0.99, 'use_ngram_features': False, 'num_layers': 4, 'hidden_size': 128, 'max_batch_size': 512, 'use_batchnorm': False, 'loss_function': 'auto'}, 'WeightedEnsemble_L2': {'use_orig_features': False, 'valid_stacker': True, 'max_base_models': 0, 'max_base_models_per_type': 'auto', 'save_bag_folds': True}}
+leaderboard:                   model  score_val          eval_metric  pred_time_val  ...  fit_time_marginal  stack_level  can_infer  fit_order
+0   WeightedEnsemble_L2  -0.131134  mean_absolute_error       0.610260  ...           0.035817            2       True         11
+1              LightGBM  -0.132337  mean_absolute_error       0.487237  ...          24.447476            1       True          4
+2              CatBoost  -0.136779  mean_absolute_error       0.007062  ...         141.734452            1       True          6
+3               XGBoost  -0.136931  mean_absolute_error       0.037310  ...          18.035607            1       True          9
+4       RandomForestMSE  -0.137531  mean_absolute_error       0.052780  ...          94.824163            1       True          5
+5            LightGBMXT  -0.144071  mean_absolute_error       0.871168  ...          36.602390            1       True          3
+6         ExtraTreesMSE  -0.146283  mean_absolute_error       0.051586  ...          10.142440            1       True          7
+7        NeuralNetTorch  -0.149895  mean_absolute_error       0.010798  ...         183.632684            1       True         10
+8        KNeighborsDist  -0.156000  mean_absolute_error       0.025371  ...           0.279081            1       True          2
+9        KNeighborsUnif  -0.157423  mean_absolute_error       0.039138  ...           1.330006            1       True          1
+10      NeuralNetFastAI  -0.164962  mean_absolute_error       0.016452  ...          84.496900            1       True          8
+
+[11 rows x 10 columns]
