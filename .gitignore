@@ -171,3 +171,10 @@ cython_debug/
 #.idea/
 
 /supervised/models
+
+*.onnx
+**/*wandb
+
+# markus virtual environment
+/project
+
