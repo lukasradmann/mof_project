@@ -1,61 +1,58 @@
-# mof_project
+# Finding Metal Organic Frameworks for separating greenhouse gases
 
-<a target="_blank" href="https://cookiecutter-data-science.drivendata.org/">
-    <img src="https://img.shields.io/badge/CCDS-Project%20template-328F97?logo=cookiecutter" />
-</a>
+## Table of Contents
 
-Finding MOFs for separating greenhouse gases
-
-## Project Organization
+- [Project Structure](#project-structure)
+- [Pre-requisites](#pre-requisites)
+- [Installation](#pre-requisites)
+## Project Structure
 
 ```
-├── LICENSE            <- Open-source license if one is chosen
-├── Makefile           <- Makefile with convenience commands like `make data` or `make train`
-├── README.md          <- The top-level README for developers using this project.
+
+├── README.md                     <- The top-level README for developers using this project.
+├── .gitignore                    <- The top-level README for developers using this project.
+│
+├── autogluon
+│   ├── AutogluonModels           <- Saved autogluon models.
+│   ├── autogluon.py              <- Code for training an autogluon model.
+│   └── requirements.txt          <- Required dependencies.
+│
 ├── data
-│   ├── external       <- Data from third party sources.
-│   ├── interim        <- Intermediate data that has been transformed.
-│   ├── processed      <- The final, canonical data sets for modeling.
-│   └── raw            <- The original, immutable data dump.
+│   ├── preprocessing.ipynb       <- Code for preprocessing original dataset
+│   ├── processed_MOFs.csv        <- Intermediate data that has been transformed.
+│   ├── val_MOFs.csv              <- The final validation set.
+│   ├── test_MOFs.csv             <- The final test set.
+│   ├── train_MOFs.csv            <- The final training set.
+│   └── requirements.txt          <- Required dependencies.
 │
-├── docs               <- A default mkdocs project; see www.mkdocs.org for details
+├── gcn
+│   ├── gcn.ipynb                 <- Code for training graph neural network.
+│   └── requirements.txt          <- Required dependencies.
 │
-├── models             <- Trained and serialized models, model predictions, or model summaries
+├── neuralnet
+│   ├── nn.ipynb                  <- Code for training neural network.
+│   └── requirements.txt          <- Intermediate data that has been transformed.
 │
-├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-│                         the creator's initials, and a short `-` delimited description, e.g.
-│                         `1.0-jqp-initial-data-exploration`.
-│
-├── pyproject.toml     <- Project configuration file with package metadata for 
-│                         mof_project and configuration for tools like black
-│
-├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-│
-├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-│   └── figures        <- Generated graphics and figures to be used in reporting
-│
-├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-│                         generated with `pip freeze > requirements.txt`
-│
-├── setup.cfg          <- Configuration file for flake8
-│
-└── mof_project   <- Source code for use in this project.
-    │
-    ├── __init__.py             <- Makes mof_project a Python module
-    │
-    ├── config.py               <- Store useful variables and configuration
-    │
-    ├── dataset.py              <- Scripts to download or generate data
-    │
-    ├── features.py             <- Code to create features for modeling
-    │
-    ├── modeling                
-    │   ├── __init__.py 
-    │   ├── predict.py          <- Code to run model inference with trained models          
-    │   └── train.py            <- Code to train models
-    │
-    └── plots.py                <- Code to create visualizations
+└──scikit
+    ├── feature_engineering.ipynb <- Code for feature engineering.
+    ├── model_selection.ipynb     <- Code for regression model selection.
+    └── requirements.txt          <- Required dependencies.
 ```
 
+## Pre-requisites
+
+Before you begin, ensure you have met the following requirements:
+
+- **Python**: Make sure you have Python installed.
+- **Weights & Biases Account**: To train a neural network you need to create an account on Weights & Biases (W&B) for experiment tracking and logging.
+
+
+## Installation
+
+Before running any script in a given folder, install the required packages using the following command:
+
+```sh
+pip install -r requirements.txt
+```
 --------
 
