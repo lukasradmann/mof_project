@@ -4,10 +4,10 @@ from sklearn.model_selection import train_test_split
 
 
 '''
-Trains the model on the 'train_data' and predicts the target variable on the 'test_data'.
-'metric' is the evaluation metric used to train the model.
-'sample_size' is the sample size of 'train_data'.
-'time_limit' is the time limit for training the model.
+This function trains a model on the provided 'train_data' and predicts the target variable on the 'test_data'.
+'metric' specifies the evaluation metric used to train the model.
+'sample_size' determines the number of samples to use from 'train_data' and 'test_data'.
+'time_limit' is the maximum time allowed for model training.
 '''
 def train_test(train_data,test_data, metric, sample_size, time_limit):
     label = 'CO2_uptake_P0.15bar_T298K [mmol/g]'
@@ -16,9 +16,7 @@ def train_test(train_data,test_data, metric, sample_size, time_limit):
         train_data = train_data.sample(n=sample_size, random_state=42)
         test_data = test_data.sample(n=sample_size, random_state=42)
 
-    #train data
     predictor = TabularPredictor(label=label, eval_metric=metric).fit(train_data, time_limit=time_limit)
-    #test data
     y_test = test_data[label]
     test_data_no_label = test_data.drop(columns=[label], axis=1)
     y_pred = predictor.predict(test_data_no_label)
@@ -27,7 +25,6 @@ def train_test(train_data,test_data, metric, sample_size, time_limit):
 '''
 different evaluations on the models performance
 Running this function will generate a bokeh plot of different models and their performance.
-Find the plot in the 'src/AutogluonModels' folder.
 '''
 def evaluations(predictor, y_pred, y_test, test_data):
     scores = predictor.evaluate_predictions(y_true=y_test, y_pred=y_pred, auxiliary_metrics=True)

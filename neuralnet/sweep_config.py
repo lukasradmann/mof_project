@@ -1,4 +1,4 @@
-# Configuration for hyperparameter tuning
+# Configuration for hyperparameter tuning with wandb sweep
 
 sweep_config = {
     "name": "sweepdemo",
