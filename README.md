@@ -31,7 +31,7 @@
 │
 ├── neuralnet
 │   ├── nn.ipynb                  <- Code for training neural network.
-│   ├── sweep_config.py           <- Configurations for the hyperparameter seach space.
+│   ├── sweep_config.py           <- Configurations for the hyperparameter search space.
 │   └── requirements.txt          <- Intermediate data that has been transformed.
 │
 └──scikit
