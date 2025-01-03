@@ -1,0 +1,7 @@
+torch
+numpy
+pandas
+wandb
+lightning
+torchmetrics
+onnx
