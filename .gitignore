@@ -171,9 +171,11 @@ cython_debug/
 #.idea/
 
 /supervised/models
-
+# temp files
 *.onnx
 **/*wandb
+*.pkl
+*.pth
 
 # markus virtual environment
 /project
