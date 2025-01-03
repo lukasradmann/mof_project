@@ -45,7 +45,7 @@ Before you begin, ensure you have met the following requirements:
 
 - **Python**: Make sure you have Python installed.
 - **Weights & Biases Account**: To train a neural network you need to create an account on Weights & Biases (W&B) for experiment tracking and logging.
-
+- **CIF-file dataset for GCN**: To train a graph neural network you will need to download the CIF-file dataset form the following link https://archive.materialscloud.org/record/2018.0016/v3 and use it in the code in /gcn/gcn.ipynb
 
 ## Installation
 
